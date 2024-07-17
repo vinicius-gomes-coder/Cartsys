@@ -22,7 +22,7 @@ namespace CartSysAPI.Controllers
 
             if (data_task == null)
             {
-                return NotFound("Dado não encontrado!");
+                return NotFound();
             }
 
             return Ok(data_task);
@@ -35,7 +35,7 @@ namespace CartSysAPI.Controllers
 
             if (data_task == null)
             {
-                return NotFound("Dado não encontrado!");
+                return NotFound();
             }
 
             return Ok(data_task);
@@ -48,14 +48,14 @@ namespace CartSysAPI.Controllers
             {
                 if (dto == null)
                 {
-                    return BadRequest("Sem dado para criação!");
+                    return BadRequest();
                 }
 
                 PersonDTO data_task = await _personService.Create(dto);
 
                 if (data_task == null)
                 {
-                    return NotFound("Dado não criado!");
+                    return NotFound();
                 }
 
                 return Ok(data_task);
@@ -71,14 +71,14 @@ namespace CartSysAPI.Controllers
         {
             if (dto == null)
             {
-                return BadRequest("Sem dado ou dado no formato errado!");
+                return BadRequest();
             }
 
             PersonDTO data_task = await _personService.Update(dto);
 
             if (data_task == null)
             {
-                return NotFound("Dado não encontrado!");
+                return NotFound();
             }
 
             return Ok(data_task);
@@ -91,10 +91,10 @@ namespace CartSysAPI.Controllers
 
             if (status == false)
             {
-                return BadRequest("Dado não encontrado!");
+                return BadRequest();
             }
 
-            return Ok("Dado deletado!");
+            return Ok();
         }
     }
 }

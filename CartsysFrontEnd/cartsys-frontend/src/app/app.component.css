@@ -1,0 +1,27 @@
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+button {
+  display: block;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.mat-elevation-z8 {
+  margin-bottom: 20px;
+}
